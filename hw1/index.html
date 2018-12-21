@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatbot</title>
+</head>
+<body>
+	<h1>Chatbot</h1>
+	
+	<label for="msg">Message sent to chatbox:</label>
+	<input type="text" name="message" id="msg">
+	<input  type="submit" name="submit" id="submit">
+
+	<h1>Here is the response</h1>
+	<div id="res"></div>
+
+
+
+
+
+
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" 
+	crossorigin="anonymou"></script>	
+	<script type="text/javascript" src="aws-sdk.js"></script>
+   <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+
+	<script type="text/javascript">
+		
+        AWS.config.region = 'us-east-2'; 
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'us-east-2:52fcf8b7-4421-485b-9ee7-20eb31cf1acd'});
+	</script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
